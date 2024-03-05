@@ -3,6 +3,7 @@
 @section('title', 'Login')
 
 @section('content')
+<div class="centered-form">
     <div class="col-md-6">
         <h2 class="text-center mb-4">Login</h2>
 
@@ -32,4 +33,6 @@
             <button type="submit" class="btn btn-primary btn-block">Login</button>
         </form>
     </div>
+</div>
+
 @endsection
