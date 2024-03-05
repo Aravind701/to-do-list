@@ -10,11 +10,20 @@ use Illuminate\Support\Facades\Hash;
 
 class RegisterController extends Controller
 {
+    /**
+     * show register form
+     * @return view
+     */
     public function showRegistrationForm()
     {
         return view('auth.register');
     }
 
+    /**
+     * @param $request
+     * register a user
+     * @return Redirect
+     */
     public function register(AuthRequest $request)
     {
         User::create([

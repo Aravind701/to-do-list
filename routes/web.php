@@ -33,8 +33,10 @@ Route::post('/register', [RegisterController::class, 'register'])->name('post.re
 
 //Task Routes
 Route::middleware(['auth'])->group(function () {
+    //home route
     Route::get('/home', [HomeController::class, 'index'])->name('home');
 
+    //task module
     Route::get('tasks', [TaskController::class, 'index'])->name('tasks.index');
     Route::get('tasks/{task}', [TaskController::class, 'view'])->name('tasks.view');
     Route::get('task/create', [TaskController::class, 'create'])->name('task.create');
@@ -42,6 +44,5 @@ Route::middleware(['auth'])->group(function () {
     Route::get('tasks/{task}/edit', [TaskController::class, 'edit'])->name('tasks.edit');
     Route::put('tasks/{task}',[TaskController::class, 'update'])->name('tasks.update');
     Route::delete('tasks/{task}', [TaskController::class, 'destroy'])->name('tasks.destroy');
-
     Route::post('tasks/{task}/update-status', [TaskController::class, 'updateStatus'])->name('tasks.updateStatus');
 });

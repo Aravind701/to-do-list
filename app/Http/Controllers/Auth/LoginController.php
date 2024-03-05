@@ -9,11 +9,20 @@ use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
+    /**
+     * show register form
+     * @return view
+     */
     public function showLoginForm()
     {
         return view('auth.login');
     }
 
+    /**
+     * @param $request
+     * login a user
+     * @return Redirect
+     */
     public function login(LoginAuthRequest $request)
     {
         $credentials = [
@@ -28,6 +37,10 @@ class LoginController extends Controller
         return redirect()->back()->withErrors(['email' => 'Invalid credentials']);
     }
 
+    /**
+     * logout user
+     * @return view
+     */
     public function logout()
     {
         Auth::logout();
