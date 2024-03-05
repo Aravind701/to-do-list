@@ -12,11 +12,11 @@
 TO-DO list - It is a basic task management crud based on user. User login/register module's are included.
 
 - step-1 - clone it
-- step-2 - change DB_DATABASE,DB_USERNAME,DB_PASSWORD in env 
-- step-4 - create a db
-- step-3 - composer install
-- step-4 - php artisan migrate
-- step-5 - php artisan serve
+- step-2 - create a db
+- step-3 - change DB_DATABASE,DB_USERNAME,DB_PASSWORD in env 
+- step-4 - composer install
+- step-5 - php artisan migrate
+- step-6 - php artisan serve
 
 Note : 
 - php version - 7.3|8.0
@@ -25,3 +25,19 @@ Note :
 - bootstrap - 5
 - jquery - 3.7.1
 - Datatable - 2.0.1
+
+Task Description : 
+- Create a web-based to-do list application using PHP, HTML, and CSS. The application should allow users to add, view, update, and delete tasks. Each task should have a title, description, due date, and status (completed or pending).
+
+Requirements :
+
+- User authentication
+- Task management
+- Task status update using AJAX.
+- Custom Form Validation for each Request
+
+Additional Features:
+- Implement user authentication to allow multiple users to have their own to-do lists.
+- Add sorting and filtering options for tasks using jquery DATATABLES.
+
+
