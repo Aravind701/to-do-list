@@ -20,6 +20,11 @@ class TaskController extends Controller
         return view('tasks.create');
     }
 
+    public function view(Task $task)
+    {
+        return view('tasks.view', compact('task'));
+    }
+
     public function store(TaskCreateRequest $request)
     {
         Task::create($request->all());
@@ -48,4 +53,12 @@ class TaskController extends Controller
         $task->delete();
         return redirect()->route('tasks.index')->with('success', 'Task deleted successfully.');
     }
+
+    public function updateStatus(Request $request, Task $task)
+    {
+        $task->update(['status' => $request->status]);
+
+        return response()->json(['success' => true]);
+    }
+
 }
