@@ -24,6 +24,7 @@ class TaskCreateRequest extends FormRequest
     public function rules()
     {
         return [
+            'user_id' => 'exists:users,id',
             'title' => 'required|max:255|unique:tasks,title',
             'description' => 'required',
             'due_date' => 'required|date',

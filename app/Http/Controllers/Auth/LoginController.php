@@ -22,7 +22,7 @@ class LoginController extends Controller
         ];
 
         if (Auth::attempt($credentials)) {
-            return redirect()->intended('tasks');
+            return redirect()->intended('home');
         }
 
         return redirect()->back()->withErrors(['email' => 'Invalid credentials']);
